@@ -14,7 +14,7 @@ const MedicalTips = ({ route, navigation }) => {
             <ScrollView style={styles.container}>
                 <View style={styles.contentContainer}>
                     <View style={styles.row}>
-                        <Image source={localImage} style={styles.imageStyle} />
+                        
                         <Text style={styles.name}>Medical Tips</Text>
                     </View>
                 </View>
