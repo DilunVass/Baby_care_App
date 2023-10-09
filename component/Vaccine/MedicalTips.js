@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { ref, query, orderByChild, equalTo, onValue } from 'firebase/database';
 import { db } from '../../firebase/config';
@@ -10,16 +10,17 @@ const localImage2 = require('../../assets/girl.png');
 
 const MedicalTips = ({ route, navigation }) => {
     return (
+      <Fragment>
         <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-            <ScrollView style={styles.container}>
-                <View style={styles.contentContainer}>
-                    <View style={styles.row}>
-                        
-                        <Text style={styles.name}>Medical Tips</Text>
-                    </View>
+          <ScrollView style={styles.container}>
+              <View style={styles.contentContainer}>
+                <View style={styles.row}>                    
+                    <Text style={styles.name}>Medical Tips</Text>
                 </View>
-            </ScrollView>
+              </View>
+          </ScrollView>
         </ImageBackground>
+      </Fragment>
 
     )
 }
